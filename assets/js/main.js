@@ -31,16 +31,11 @@ if (downloadBtn) {
         // URL APK v2.3.1 - À REMPLACER par l'URL réelle du build
         const apkUrl = 'https://expo.dev/artifacts/eas/9c280fc9-debf-4a33-a35c-17bf0b7d43ec.apk';
         
-        // Confirmation avant téléchargement
-        const confirmDownload = confirm('📱 Télécharger CampusGuide v2.3.1 ?\\n\\nTaille: ~50 MB\\nCompatible: Android 7.0+\\n\\n⚠️ Autorisez l\'installation depuis des sources inconnues dans les paramètres de votre téléphone.');
+        // Téléchargement direct sans confirmation
+        console.log('📥 Téléchargement APK démarré');
         
-        if (confirmDownload) {
-            // Analytics (optionnel)
-            console.log('📥 Téléchargement APK démarré');
-            
-            // Redirection vers l'APK
-            window.open(apkUrl, '_blank');
-        }
+        // Redirection directe vers l'APK
+        window.open(apkUrl, '_blank');
     });
 }
 

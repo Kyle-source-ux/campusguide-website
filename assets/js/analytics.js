@@ -55,6 +55,7 @@ class CampusGuideAnalytics {
     const downloadBtn = document.getElementById('downloadBtn');
     if (downloadBtn) {
       downloadBtn.addEventListener('click', () => {
+        // Track immédiatement sans confirmation
         this.trackAPKDownload();
       });
     }
