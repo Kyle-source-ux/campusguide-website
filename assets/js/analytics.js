@@ -109,26 +109,76 @@ class CampusGuideAnalytics {
       device_type: this.getDeviceType(),
       session_id: this.sessionId,
       country: location.country,
+      country_code: location.country_code,
+      region: location.region,
+      region_code: location.region_code,
       city: location.city,
+      postal: location.postal,
+      latitude: location.latitude,
+      longitude: location.longitude,
+      timezone: location.timezone,
       ip_address: location.ip,
+      isp: location.isp,
       timestamp: new Date().toISOString()
     };
   }
 
   async getLocationData() {
     try {
-      // API gratuite pour géolocalisation IP
+      // API ipapi.co avec détails géographiques complets
       const response = await fetch('https://ipapi.co/json/');
       const data = await response.json();
       
       return {
         country: data.country_name || null,
+        country_code: data.country_code || null,
+        region: data.region || null,
+        region_code: data.region_code || null,
         city: data.city || null,
-        ip: data.ip || null
+        postal: data.postal || null,
+        latitude: data.latitude || null,
+        longitude: data.longitude || null,
+        timezone: data.timezone || null,
+        ip: data.ip || null,
+        isp: data.org || null
       };
     } catch (error) {
-      console.warn('⚠️ Géolocalisation non disponible:', error);
-      return { country: null, city: null, ip: null };
+      console.warn('⚠️ Géolocalisation ipapi.co échouée, tentative fallback...');
+      
+      // Fallback avec ip-api.com
+      try {
+        const fallbackResponse = await fetch('http://ip-api.com/json/');
+        const fallbackData = await fallbackResponse.json();
+        
+        return {
+          country: fallbackData.country || null,
+          country_code: fallbackData.countryCode || null,
+          region: fallbackData.regionName || null,
+          region_code: fallbackData.region || null,
+          city: fallbackData.city || null,
+          postal: fallbackData.zip || null,
+          latitude: fallbackData.lat || null,
+          longitude: fallbackData.lon || null,
+          timezone: fallbackData.timezone || null,
+          ip: fallbackData.query || null,
+          isp: fallbackData.isp || null
+        };
+      } catch (fallbackError) {
+        console.warn('⚠️ Géolocalisation fallback échouée:', fallbackError);
+        return { 
+          country: null, 
+          region: null, 
+          city: null, 
+          ip: null,
+          country_code: null,
+          region_code: null,
+          postal: null,
+          latitude: null,
+          longitude: null,
+          timezone: null,
+          isp: null
+        };
+      }
     }
   }
 
