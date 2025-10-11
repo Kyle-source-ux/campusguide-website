@@ -35,14 +35,14 @@ class CampusGuideAnalytics {
     try {
       const data = await this.collectVisitorData();
       data.download_type = 'apk';
-      data.apk_version = '2.3.1';
+      data.apk_version = '2.3.2';
       
       await this.sendToSupabase('website_downloads', data);
       console.log('📥 APK download tracked');
       
       // Analytics supplémentaires
       this.trackEvent('apk_download', {
-        version: '2.3.1',
+        version: '2.3.2',
         source: 'website_button'
       });
       
