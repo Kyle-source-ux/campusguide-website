@@ -1,0 +1,255 @@
+/* ============================================
+   CAMPUSGUIDE - MODERN ICONS STYLES
+   Lucide Icons Integration
+   ============================================ */
+
+/* Global Icon Styles */
+[data-lucide] {
+    display: inline-block;
+    vertical-align: middle;
+    stroke-width: 2;
+    transition: all 0.3s ease;
+}
+
+/* Icon Animations */
+.feature-card .icon [data-lucide],
+.value-icon [data-lucide] {
+    stroke-width: 1.5;
+    color: #667eea;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover .icon [data-lucide] {
+    transform: scale(1.15) rotate(5deg);
+    color: #764ba2;
+    filter: drop-shadow(0 4px 12px rgba(102, 126, 234, 0.4));
+}
+
+.value-icon [data-lucide] {
+    color: #667eea;
+}
+
+.value-item:hover .value-icon [data-lucide] {
+    transform: scale(1.2) rotate(-5deg);
+    filter: drop-shadow(0 4px 16px rgba(102, 126, 234, 0.5));
+}
+
+/* Button Icons */
+.btn-primary [data-lucide],
+.btn-secondary [data-lucide],
+.btn-large [data-lucide] {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover [data-lucide],
+.btn-secondary:hover [data-lucide],
+.btn-large:hover [data-lucide] {
+    transform: translateX(3px);
+}
+
+/* Navigation Icons */
+.btn-web-version [data-lucide] {
+    color: inherit;
+}
+
+/* FAQ Icons */
+.faq-item h3 [data-lucide] {
+    stroke-width: 2;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faq-item:hover h3 [data-lucide] {
+    transform: scale(1.15);
+    color: #764ba2;
+}
+
+/* About Section Icons */
+.about-text h3 [data-lucide] {
+    stroke-width: 2;
+}
+
+/* Play Button Icon */
+.play-button [data-lucide] {
+    color: #667eea;
+    stroke-width: 1.5;
+    filter: drop-shadow(0 4px 12px rgba(102, 126, 234, 0.3));
+    transition: all 0.3s ease;
+}
+
+.video-placeholder:hover .play-button [data-lucide] {
+    transform: scale(1.1);
+    color: #764ba2;
+    filter: drop-shadow(0 6px 20px rgba(102, 126, 234, 0.5));
+}
+
+/* Contact Icons */
+.contact-info h3 [data-lucide],
+.partnership-info h3 [data-lucide],
+.social-links h3 [data-lucide] {
+    stroke-width: 2;
+}
+
+.contact-info p [data-lucide],
+.partnership-info li [data-lucide] {
+    color: #667eea;
+    stroke-width: 2;
+}
+
+/* Social Buttons Icons */
+.social-btn [data-lucide] {
+    transition: transform 0.3s ease;
+}
+
+.social-btn:hover [data-lucide] {
+    transform: scale(1.2) rotate(360deg);
+}
+
+/* Download Section Icons */
+.download h3 [data-lucide] {
+    stroke-width: 2;
+}
+
+#downloadBtn [data-lucide] {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+#downloadBtn:hover [data-lucide] {
+    animation: none;
+    transform: translateY(-2px);
+}
+
+/* Responsive Icons */
+@media (max-width: 768px) {
+    .feature-card .icon [data-lucide] {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    .value-icon [data-lucide] {
+        width: 36px !important;
+        height: 36px !important;
+    }
+    
+    .play-button [data-lucide] {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+/* Icon Colors by Context */
+.whatsapp [data-lucide] {
+    color: #25D366;
+}
+
+.facebook [data-lucide] {
+    color: #1877F2;
+}
+
+.twitter [data-lucide] {
+    color: #1DA1F2;
+}
+
+.instagram [data-lucide] {
+    color: #E4405F;
+}
+
+/* Pulse Animation for Important Icons */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+.btn-primary [data-lucide="download"] {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Gradient Icons (Premium Look) */
+.feature-card .icon {
+    position: relative;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border-radius: 16px;
+    transition: all 0.4s ease;
+}
+
+.feature-card:hover .icon {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+}
+
+/* Icon Badge Effect */
+.value-icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    margin: 0 auto 15px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.value-icon [data-lucide] {
+    color: white !important;
+}
+
+.value-item:hover .value-icon {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+}
+
+/* Loading State for Icons */
+@keyframes iconFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+[data-lucide] {
+    animation: iconFadeIn 0.5s ease-out;
+}
+
+/* Accessibility */
+[data-lucide]:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Dark Mode Ready (Future) */
+@media (prefers-color-scheme: dark) {
+    [data-lucide] {
+        stroke-width: 2;
+    }
+}
+
+/* Print Styles */
+@media print {
+    [data-lucide] {
+        display: none;
+    }
+}
