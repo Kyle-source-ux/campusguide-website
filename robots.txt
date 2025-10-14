@@ -1,0 +1,43 @@
+# Robots.txt pour CampusGuide
+# Site: https://campusguide.space
+# Mis à jour: 14 Octobre 2025
+
+# Autoriser tous les robots à crawler le site
+User-agent: *
+Allow: /
+
+# Bloquer l'accès aux fichiers inutiles
+Disallow: /assets/
+Disallow: *.js$
+Disallow: *.css$
+Disallow: *.json$
+
+# Exceptions: permettre le crawling des pages importantes
+Allow: /index.html
+Allow: /
+
+# Sitemap
+Sitemap: https://campusguide.space/sitemap.xml
+
+# Crawl delay (optionnel - éviter surcharge serveur)
+Crawl-delay: 1
+
+# Instructions spécifiques pour Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Instructions pour Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Bloquer les mauvais bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

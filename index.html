@@ -5,11 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CampusGuide - L'application étudiante qui connecte les campus de RDC">
     <title>CampusGuide - Votre Campus Connecté</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="assets/CampusGuide_logo_n.png">
+    <link rel="apple-touch-icon" href="assets/CampusGuide_logo_n.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://campusguide.space/">
+    <meta property="og:title" content="CampusGuide - Votre Campus Connecté">
+    <meta property="og:description" content="Rejoignez 20 000+ étudiants de RDC sur la plateforme étudiante la plus dynamique">
+    <meta property="og:image" content="https://campusguide.space/assets/CampusGuide_logo_n.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://campusguide.space/">
+    <meta property="twitter:title" content="CampusGuide - Votre Campus Connecté">
+    <meta property="twitter:description" content="Rejoignez 20 000+ étudiants de RDC sur la plateforme étudiante la plus dynamique">
+    <meta property="twitter:image" content="https://campusguide.space/assets/CampusGuide_logo_n.png">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            'send_page_view': true,
+            'page_title': 'CampusGuide - Accueil',
+            'anonymize_ip': true
+        });
+    </script>
 </head>
 <body>
     <nav class="navbar" id="navbar">
