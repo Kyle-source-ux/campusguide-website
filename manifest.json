@@ -1,0 +1,36 @@
+{
+  "name": "CampusGuide - Votre Campus Connecté",
+  "short_name": "CampusGuide",
+  "description": "L'application étudiante qui connecte les campus de RDC",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/CampusGuide_logo_n.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/CampusGuide_logo_n.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "social", "productivity"],
+  "lang": "fr-CD",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://campusguide.space",
+      "id": "cd.campusguide.app"
+    }
+  ]
+}
