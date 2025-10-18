@@ -6,6 +6,7 @@
     <meta name="description" content="CampusGuide - L'application étudiante qui connecte les campus de RDC">
     <title>CampusGuide - Votre Campus Connecté</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- PWA Manifest et Meta Tags -->
@@ -16,6 +17,9 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <nav class="navbar" id="navbar">
@@ -33,6 +37,7 @@
                     <li><a href="#temoignages">Témoignages</a></li>
                     <li><a href="#telecharger">Télécharger</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://ios.campusguide.space" target="_blank" class="btn-web-version"><i data-lucide="apple" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i>Version iOS</a></li>
                 </ul>
             </div>
         </div>
@@ -52,8 +57,9 @@
                     <div class="stat"><strong>1M+</strong><span>Publications</span></div>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#telecharger" class="btn-primary">📥 Télécharger l'App</a>
-                    <a href="https://chat.whatsapp.com/ISNDZZwt9hrCKfhuaXEx1F?mode=ems_copy_t" target="_blank" class="btn-secondary">💬 Rejoindre WhatsApp</a>
+                    <a href="#telecharger" class="btn-primary"><i data-lucide="download" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Télécharger Android</a>
+                    <a href="https://ios.campusguide.space" target="_blank" class="btn-secondary"><i data-lucide="apple" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Version iOS/Web</a>
+                    <a href="https://chat.whatsapp.com/ISNDZZwt9hrCKfhuaXEx1F?mode=ems_copy_t" target="_blank" class="btn-secondary"><i data-lucide="message-circle" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Rejoindre WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -64,26 +70,26 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>À Propos de <span class="gradient-text">CampusGuide</span></h2>
-                    <h3>🎯 Notre Mission</h3>
+                    <h3><i data-lucide="target" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Notre Mission</h3>
                     <p>Connecter tous les étudiants de la République Démocratique du Congo sur une plateforme unique, moderne et accessible.</p>
                     
-                    <h3>🔮 Notre Vision</h3>
+                    <h3><i data-lucide="eye" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Notre Vision</h3>
                     <p>Devenir la référence de l'écosystème étudiant en RDC en facilitant l'entraide, l'orientation et l'inclusion universitaire.</p>
                     
-                    <h3>💎 Nos Valeurs</h3>
+                    <h3><i data-lucide="gem" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Nos Valeurs</h3>
                     <div class="values-grid">
                         <div class="value-item">
-                            <div class="value-icon">🤝</div>
+                            <div class="value-icon"><i data-lucide="handshake" style="width: 40px; height: 40px;"></i></div>
                             <h4>Entraide</h4>
                             <p>Favoriser la collaboration entre étudiants</p>
                         </div>
                         <div class="value-item">
-                            <div class="value-icon">🧭</div>
+                            <div class="value-icon"><i data-lucide="compass" style="width: 40px; height: 40px;"></i></div>
                             <h4>Orientation</h4>
                             <p>Guider les étudiants dans leur parcours</p>
                         </div>
                         <div class="value-item">
-                            <div class="value-icon">🌍</div>
+                            <div class="value-icon"><i data-lucide="globe" style="width: 40px; height: 40px;"></i></div>
                             <h4>Inclusion</h4>
                             <p>Connecter tous les campus de RDC</p>
                         </div>
@@ -91,7 +97,7 @@
                 </div>
                 <div class="about-video">
                     <div class="video-placeholder">
-                        <div class="play-button">▶️</div>
+                        <div class="play-button"><i data-lucide="play-circle" style="width: 60px; height: 60px;"></i></div>
                         <p>Vidéo de présentation</p>
                         <small>Découvrez CampusGuide en 2 minutes</small>
                     </div>
@@ -105,32 +111,32 @@
             <h2>Tout Ce Dont Vous Avez Besoin</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="icon">🏫</div>
+                    <div class="icon"><i data-lucide="school" style="width: 48px; height: 48px;"></i></div>
                     <h3>Groupes par Université</h3>
                     <p>Rejoignez votre université et faculté</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon">💬</div>
+                    <div class="icon"><i data-lucide="message-square-text" style="width: 48px; height: 48px;"></i></div>
                     <h3>Discussions Temps Réel</h3>
                     <p>Messages texte et vocaux instantanés</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon">📱</div>
+                    <div class="icon"><i data-lucide="video" style="width: 48px; height: 48px;"></i></div>
                     <h3>Publications & Vidéos</h3>
                     <p>Partagez statuts et contenus éducatifs</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon">✅</div>
+                    <div class="icon"><i data-lucide="shield-check" style="width: 48px; height: 48px;"></i></div>
                     <h3>Vérification Comptes</h3>
                     <p>Badge Campus Verified authentique</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon">⭐</div>
+                    <div class="icon"><i data-lucide="star" style="width: 48px; height: 48px;"></i></div>
                     <h3>Nouveaux Badges</h3>
                     <p>Système d'étoiles et interactions</p>
                 </div>
                 <div class="feature-card">
-                    <div class="icon">👥</div>
+                    <div class="icon"><i data-lucide="users" style="width: 48px; height: 48px;"></i></div>
                     <h3>Groupes d'Étude</h3>
                     <p>Collaborez avec vos camarades</p>
                 </div>
@@ -143,27 +149,27 @@
             <h2>Questions Fréquentes</h2>
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h3>❓ Comment créer un compte ?</h3>
+                    <h3><i data-lucide="help-circle" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Comment créer un compte ?</h3>
                     <p>Deux options : téléchargez l'app Android ou utilisez <a href="https://ios.campusguide.space" target="_blank" style="color: #667eea;">ios.campusguide.space</a> sur iPhone/iPad. Inscrivez-vous avec votre email en quelques secondes !</p>
                 </div>
                 <div class="faq-item">
-                    <h3>🏆 Comment recevoir le badge Campus Verified ?</h3>
+                    <h3><i data-lucide="award" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Comment recevoir le badge Campus Verified ?</h3>
                     <p>Pour obtenir le badge Campus Verified, utilisez votre email universitaire lors de l'inscription. Exemples : @unikin.ac.cd, @unilu.ac.cd, @unikin.cd, @unigoma.ac.cd, etc. Si votre université n'est pas reconnue automatiquement, contactez-nous !</p>
                 </div>
                 <div class="faq-item">
-                    <h3>📥 Que faire si le téléchargement échoue ?</h3>
+                    <h3><i data-lucide="download-cloud" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Que faire si le téléchargement échoue ?</h3>
                     <p>Vérifiez votre connexion internet, autorisez les sources inconnues dans les paramètres Android.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>🔐 Problèmes de connexion ?</h3>
+                    <h3><i data-lucide="lock" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Problèmes de connexion ?</h3>
                     <p>Vérifiez votre email/mot de passe, contactez support@campusguide.space si le problème persiste.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>🍎 Puis-je utiliser CampusGuide sur iPhone ?</h3>
+                    <h3><i data-lucide="smartphone" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Puis-je utiliser CampusGuide sur iPhone ?</h3>
                     <p>Oui ! Visitez <a href="https://ios.campusguide.space" target="_blank" style="color: #667eea; font-weight: 600;">ios.campusguide.space</a> sur Safari. Vous pouvez l'ajouter à votre écran d'accueil pour une expérience app native. Compatible iPhone, iPad et Mac !</p>
                 </div>
                 <div class="faq-item">
-                    <h3>💬 Comment rejoindre des groupes ?</h3>
+                    <h3><i data-lucide="message-circle" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Comment rejoindre des groupes ?</h3>
                     <p>Sélectionnez votre université lors de l'inscription, puis explorez les groupes de votre faculté.</p>
                 </div>
             </div>
@@ -210,16 +216,16 @@
             <h2>Téléchargez CampusGuide</h2>
             
             <div style="margin-bottom: 40px;">
-                <h3 style="color: #667eea; margin-bottom: 10px;">📱 Android</h3>
+                <h3 style="color: #667eea; margin-bottom: 10px;"><i data-lucide="smartphone" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i>Android</h3>
                 <p>Version 2.3.2 • ~50 MB</p>
-                <button id="downloadBtn" class="btn-primary btn-large">📥 Télécharger APK Android</button>
+                <button id="downloadBtn" class="btn-primary btn-large"><i data-lucide="download" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Télécharger APK Android</button>
             </div>
 
             <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 20px; color: white; text-align: center;">
-                <h3 style="margin-bottom: 15px; font-size: 24px;">🍎 Version iOS & Web App</h3>
+                <h3 style="margin-bottom: 15px; font-size: 24px;"><i data-lucide="apple" style="width: 28px; height: 28px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i>Version iOS & Web App</h3>
                 <p style="margin-bottom: 20px; opacity: 0.95;">Utilisez CampusGuide directement dans votre navigateur Safari. Compatible iPhone, iPad et ordinateur !</p>
-                <a href="https://ios.campusguide.space" target="_blank" class="btn-primary btn-large" style="background: white; color: #667eea; display: inline-block; text-decoration: none;">🌐 Ouvrir ios.campusguide.space</a>
-                <p style="margin-top: 15px; font-size: 14px; opacity: 0.85;">💡 Ajoutez à votre écran d'accueil pour une expérience app native</p>
+                <a href="https://ios.campusguide.space" target="_blank" class="btn-primary btn-large" style="background: white; color: #667eea; display: inline-block; text-decoration: none;"><i data-lucide="globe" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Ouvrir ios.campusguide.space</a>
+                <p style="margin-top: 15px; font-size: 14px; opacity: 0.85;"><i data-lucide="lightbulb" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i>Ajoutez à votre écran d'accueil pour une expérience app native</p>
             </div>
         </div>
     </section>
@@ -229,38 +235,38 @@
             <h2>Contactez-Nous & Partenariats</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>📞 Contact Rapide</h3>
-                    <p>📧 <a href="mailto:support@campusguide.space">support@campusguide.space</a></p>
-                    <p>💬 <a href="https://chat.whatsapp.com/ISNDZZwt9hrCKfhuaXEx1F?mode=ems_copy_t" target="_blank">Groupe WhatsApp</a></p>
-                    <p>📍 Kinshasa, République Démocratique du Congo</p>
+                    <h3><i data-lucide="phone" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Contact Rapide</h3>
+                    <p><i data-lucide="mail" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i><a href="mailto:support@campusguide.space">support@campusguide.space</a></p>
+                    <p><i data-lucide="message-circle" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i><a href="https://chat.whatsapp.com/ISNDZZwt9hrCKfhuaXEx1F?mode=ems_copy_t" target="_blank">Groupe WhatsApp</a></p>
+                    <p><i data-lucide="map-pin" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Kinshasa, République Démocratique du Congo</p>
                 </div>
                 <div class="partnership-info">
-                    <h3>🤝 Partenariats</h3>
+                    <h3><i data-lucide="handshake" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Partenariats</h3>
                     <p>Nous collaborons avec :</p>
                     <ul>
-                        <li>🏫 Universités et instituts supérieurs</li>
-                        <li>📱 Opérateurs télécoms (Vodacom, Airtel, Orange)</li>
-                        <li>🎓 Organisations étudiantes</li>
-                        <li>💼 Entreprises tech locales</li>
+                        <li><i data-lucide="school" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Universités et instituts supérieurs</li>
+                        <li><i data-lucide="smartphone" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Opérateurs télécoms (Vodacom, Airtel, Orange)</li>
+                        <li><i data-lucide="users" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Organisations étudiantes</li>
+                        <li><i data-lucide="briefcase" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Entreprises tech locales</li>
                     </ul>
                     <p><strong>Intéressé par un partenariat ?</strong><br>
                     Contactez-nous à <a href="mailto:partenariat@campusguide.space">partenariat@campusguide.space</a></p>
                 </div>
             </div>
             <div class="social-links">
-                <h3>🌐 Suivez-Nous</h3>
+                <h3><i data-lucide="share-2" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Suivez-Nous</h3>
                 <div class="social-buttons">
                     <a href="https://chat.whatsapp.com/ISNDZZwt9hrCKfhuaXEx1F?mode=ems_copy_t" target="_blank" class="social-btn whatsapp">
-                        💬 WhatsApp
+                        <i data-lucide="message-circle" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>WhatsApp
                     </a>
                     <a href="#" class="social-btn facebook">
-                        📘 Facebook
+                        <i data-lucide="facebook" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Facebook
                     </a>
                     <a href="#" class="social-btn twitter">
-                        🐦 Twitter
+                        <i data-lucide="twitter" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Twitter
                     </a>
                     <a href="#" class="social-btn instagram">
-                        📸 Instagram
+                        <i data-lucide="instagram" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Instagram
                     </a>
                 </div>
             </div>
@@ -275,5 +281,16 @@
 
     <script src="assets/js/analytics.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+        // Initialize all Lucide icons on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+                console.log('✅ Lucide Icons initialized');
+            }
+        });
+    </script>
 </body>
 </html>
