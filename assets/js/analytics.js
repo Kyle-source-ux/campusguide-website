@@ -4,10 +4,8 @@
 class CampusGuideAnalytics {
   constructor() {
     this.sessionId = this.generateSessionId();
-    // ✅ PROJET PRINCIPAL CAMPUSGUIDE (Corrigé le 14/10/2025)
-    // Ancienne URL (projet inexistant): kbgbxnwfvqwdqwvpbhvg.supabase.co
-    this.supabaseUrl = 'https://wwicmhvhrdbcxkiqairc.supabase.co';
-    this.supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind3aWNtaHZocmRiY3hraXFhaXJjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0Mjc1NDUsImV4cCI6MjA3NDAwMzU0NX0.BCMxtaTTXe9G4_fjqppw8N6M1-8x0N_hGA6p_Fjow00';
+    this.supabaseUrl = 'https://kbgbxnwfvqwdqwvpbhvg.supabase.co';
+    this.supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtiZ2J4bndmdnF3ZHF3dnBiaHZnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjcyNjg0ODMsImV4cCI6MjA0Mjg0NDQ4M30.7Ym-Wd_Oy8gVYhqvXhfpJmqRfLnFKJNhgFVgKhEgLJI';
     
     this.init();
   }

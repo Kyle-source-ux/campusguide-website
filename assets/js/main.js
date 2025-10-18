@@ -28,11 +28,17 @@ window.addEventListener('scroll', () => {
 const downloadBtn = document.getElementById('downloadBtn');
 if (downloadBtn) {
     downloadBtn.addEventListener('click', async () => {
-        // URL APK v2.3.2 - Build du 11/10/2025
-        const apkUrl = 'https://expo.dev/artifacts/eas/5C7168eyLUKGjmtg38VM7G.apk';
+        // URL APK v2.3.2 - Build Expo EAS
+        const apkUrl = 'https://expo.dev/artifacts/eas/9c280fc9-debf-4a33-a35c-17bf0b7d43ec.apk';
         
-        // Téléchargement direct sans confirmation
-        console.log('📥 Téléchargement APK démarré');
+        // 📊 IMPORTANT: Tracker le téléchargement AVANT d'ouvrir le lien
+        if (window.campusGuideAnalytics) {
+            await window.campusGuideAnalytics.trackAPKDownload();
+            console.log('✅ Téléchargement tracké');
+        }
+        
+        // Téléchargement direct
+        console.log('📥 Téléchargement APK v2.3.2 démarré');
         
         // Redirection directe vers l'APK
         window.open(apkUrl, '_blank');
