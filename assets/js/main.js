@@ -28,8 +28,8 @@ window.addEventListener('scroll', () => {
 const downloadBtn = document.getElementById('downloadBtn');
 if (downloadBtn) {
     downloadBtn.addEventListener('click', async () => {
-        // URL APK v2.3.2 - Build Expo EAS
-        const apkUrl = 'https://expo.dev/artifacts/eas/9c280fc9-debf-4a33-a35c-17bf0b7d43ec.apk';
+        // URL APK v2.3.4 - Build Expo EAS
+        const apkUrl = 'https://expo.dev/artifacts/eas/rZcWNrvkVaV6B1ytL6vdLZ.apk';
         
         // 📊 IMPORTANT: Tracker le téléchargement AVANT d'ouvrir le lien
         if (window.campusGuideAnalytics) {
@@ -38,7 +38,7 @@ if (downloadBtn) {
         }
         
         // Téléchargement direct
-        console.log('📥 Téléchargement APK v2.3.2 démarré');
+        console.log('📥 Téléchargement APK v2.3.4 démarré');
         
         // Redirection directe vers l'APK
         window.open(apkUrl, '_blank');
@@ -149,5 +149,5 @@ createParticles();
 
 // Console message
 console.log('%c🎓 CampusGuide', 'font-size: 24px; font-weight: bold; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;');
-console.log('%cVersion 2.3.2 - campusguide.space', 'font-size: 12px; color: #667eea;');
+console.log('%cVersion 2.3.4 - campusguide.space', 'font-size: 12px; color: #667eea;');
 console.log('%cDéveloppé avec ❤️ pour les étudiants de RDC', 'font-size: 12px; color: #00b894;');
