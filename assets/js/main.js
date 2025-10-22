@@ -28,8 +28,8 @@ window.addEventListener('scroll', () => {
 const downloadBtn = document.getElementById('downloadBtn');
 if (downloadBtn) {
     downloadBtn.addEventListener('click', async () => {
-        // URL APK v2.3.4 - Build Expo EAS
-        const apkUrl = 'https://expo.dev/artifacts/eas/rZcWNrvkVaV6B1ytL6vdLZ.apk';
+        // URL APK v2.3.4 Runtime 1.1.0 - Build Expo EAS (22 Oct 2025)
+        const apkUrl = 'https://expo.dev/artifacts/eas/wodbtffgWr1TW7XfRHffj3.apk';
         
         // 📊 IMPORTANT: Tracker le téléchargement AVANT d'ouvrir le lien
         if (window.campusGuideAnalytics) {
