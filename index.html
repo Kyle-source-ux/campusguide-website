@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CampusGuide - L'application étudiante qui connecte les campus de RDC">
-    <title>CampusGuide - Votre Campus Connecté</title>
+    <meta name="description" content="CampusGuide RDC - La plateforme éducative qui connecte étudiants, finalistes, écoles, universités et centres de formation de la RDC">
+    <title>CampusGuide RDC - Plateforme Éducative Complète</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,9 +17,34 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      /* ── User types section ── */
+      .user-types { background: #f8f9ff; padding: 80px 0; }
+      .user-types h2 { text-align: center; margin-bottom: 12px; }
+      .user-types .subtitle { text-align: center; color: #636e72; margin-bottom: 48px; font-size: 16px; }
+      .types-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+      .type-card { background: white; border-radius: 16px; padding: 28px 20px; text-align: center; box-shadow: 0 4px 16px rgba(0,0,0,0.07); border-top: 4px solid var(--c, #667eea); transition: transform .2s; }
+      .type-card:hover { transform: translateY(-4px); }
+      .type-card .type-icon { font-size: 40px; margin-bottom: 12px; }
+      .type-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; color: #2d3436; }
+      .type-card p { font-size: 13px; color: #636e72; line-height: 1.5; }
+      /* ── Google Play button ── */
+      .btn-play { display: inline-flex; align-items: center; gap: 10px; background: #000; color: #fff; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 15px; transition: opacity .2s; }
+      .btn-play:hover { opacity: .85; }
+      .btn-play-logo { width: 28px; height: 28px; }
+      /* ── Safety banner ── */
+      .safety-banner { background: linear-gradient(135deg, #d63031, #c0392b); color: white; padding: 16px 0; text-align: center; }
+      .safety-banner a { color: #ffeaa7; font-weight: 700; text-decoration: underline; }
+      /* ── Legal footer links ── */
+      .footer-legal { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 16px; }
+      .footer-legal a { color: #b2bec3; font-size: 13px; text-decoration: none; }
+      .footer-legal a:hover { color: white; text-decoration: underline; }
+      @media (max-width: 600px) { .types-grid { grid-template-columns: repeat(2, 1fr); } }
+    </style>
 </head>
 <body>
     <nav class="navbar" id="navbar">
@@ -32,9 +57,9 @@
                 <ul class="nav-menu">
                     <li><a href="#accueil">Accueil</a></li>
                     <li><a href="#apropos">À Propos</a></li>
+                    <li><a href="#utilisateurs">Utilisateurs</a></li>
                     <li><a href="#fonctionnalites">Fonctionnalités</a></li>
                     <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#temoignages">Témoignages</a></li>
                     <li><a href="#telecharger">Télécharger</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="https://ios.campusguide.space" target="_blank" class="btn-web-version"><i data-lucide="apple" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i>Version iOS</a></li>
@@ -49,21 +74,33 @@
                 <div class="hero-logo-large">
                     <img src="assets/CampusGuide_logo_n.png" alt="CampusGuide" class="hero-logo-img">
                 </div>
-                <h1>CampusGuide <span class="gradient-text">Cascade Universitaire</span></h1>
-                <p class="hero-subtitle">Rejoignez 20 000+ étudiants de RDC sur la plateforme étudiante la plus dynamique</p>
+                <h1>CampusGuide <span class="gradient-text">RDC</span></h1>
+                <p class="hero-subtitle">La plateforme éducative complète pour étudiants, finalistes, écoles, universités et centres de formation de la République Démocratique du Congo</p>
                 <div class="hero-stats">
-                    <div class="stat"><strong>20K+</strong><span>Étudiants</span></div>
+                    <div class="stat"><strong>20K+</strong><span>Utilisateurs</span></div>
                     <div class="stat"><strong>113+</strong><span>Universités</span></div>
-                    <div class="stat"><strong>1M+</strong><span>Publications</span></div>
+                    <div class="stat"><strong>6</strong><span>Types de comptes</span></div>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#telecharger" class="btn-primary"><i data-lucide="download" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Télécharger Android</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.campusguide.app" target="_blank" class="btn-play">
+                        <svg class="btn-play-logo" viewBox="0 0 24 24" fill="white"><path d="M3 20.5v-17c0-.83 1.01-1.3 1.62-.78l14 8.5c.52.32.52 1.04 0 1.36l-14 8.5C3.93 21.8 3 21.33 3 20.5z"/></svg>
+                        Google Play
+                    </a>
+                    <a href="#telecharger" class="btn-primary"><i data-lucide="download" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Télécharger APK</a>
                     <a href="https://ios.campusguide.space" target="_blank" class="btn-secondary"><i data-lucide="apple" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Version iOS/Web</a>
-                    <a href="https://chat.whatsapp.com/ISNDZZwt9hrCKfhuaXEx1F?mode=ems_copy_t" target="_blank" class="btn-secondary"><i data-lucide="message-circle" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Rejoindre WhatsApp</a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Safety Banner -->
+    <div class="safety-banner">
+        <div class="container">
+            🛡️ CampusGuide s'engage pour la sécurité des enfants &mdash;
+            <a href="securite-enfants.html">Voir notre politique CSAE</a>
+            &nbsp;|&nbsp; Signalement : <a href="mailto:support@campusguide.space">support@campusguide.space</a>
+        </div>
+    </div>
 
     <section class="about" id="apropos">
         <div class="container">
@@ -106,6 +143,46 @@
         </div>
     </section>
 
+    <!-- User Types Section -->
+    <section class="user-types" id="utilisateurs">
+        <div class="container">
+            <h2>Fait Pour <span class="gradient-text">Tout le Monde</span></h2>
+            <p class="subtitle">CampusGuide s'adresse à tous les acteurs de l'éducation en RDC</p>
+            <div class="types-grid">
+                <div class="type-card" style="--c:#667eea">
+                    <div class="type-icon">🎓</div>
+                    <h3>Étudiant Universitaire</h3>
+                    <p>Rejoignez votre université, faculté et promotion. Discutez, publiez, apprenez.</p>
+                </div>
+                <div class="type-card" style="--c:#00b894">
+                    <div class="type-icon">📚</div>
+                    <h3>Finaliste</h3>
+                    <p>Terminale ? Orientez-vous, préparez l'examen d'État et choisissez votre filière universitaire.</p>
+                </div>
+                <div class="type-card" style="--c:#e17055">
+                    <div class="type-icon">🏫</div>
+                    <h3>École / Lycée</h3>
+                    <p>Créez un profil institutionnel, publiez vos résultats et recrutez vos finalistes.</p>
+                </div>
+                <div class="type-card" style="--c:#fdcb6e">
+                    <div class="type-icon">🏛️</div>
+                    <h3>Université / Institut</h3>
+                    <p>Profil officiel, annonces académiques et suivi de vos étudiants sur CampusGuide.</p>
+                </div>
+                <div class="type-card" style="--c:#a29bfe">
+                    <div class="type-icon">🏢</div>
+                    <h3>Centre de Formation</h3>
+                    <p>Présentez vos formations, contactez les étudiants et gérez vos apprenants.</p>
+                </div>
+                <div class="type-card" style="--c:#00cec9">
+                    <div class="type-icon">🤝</div>
+                    <h3>Ambassadeur</h3>
+                    <p>Promouvez CampusGuide, gagnez des commissions et développez votre réseau.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="features" id="fonctionnalites">
         <div class="container">
             <h2>Tout Ce Dont Vous Avez Besoin</h2>
@@ -113,7 +190,7 @@
                 <div class="feature-card">
                     <div class="icon"><i data-lucide="school" style="width: 48px; height: 48px;"></i></div>
                     <h3>Groupes par Université</h3>
-                    <p>Rejoignez votre université et faculté</p>
+                    <p>Rejoignez votre université, faculté et promotion</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon"><i data-lucide="message-square-text" style="width: 48px; height: 48px;"></i></div>
@@ -127,18 +204,48 @@
                 </div>
                 <div class="feature-card">
                     <div class="icon"><i data-lucide="shield-check" style="width: 48px; height: 48px;"></i></div>
-                    <h3>Vérification Comptes</h3>
-                    <p>Badge Campus Verified authentique</p>
+                    <h3>Campus Verified</h3>
+                    <p>Badge d'authenticité pour comptes vérifiés</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i data-lucide="bot" style="width: 48px; height: 48px;"></i></div>
+                    <h3>Lucie IA</h3>
+                    <p>Assistante intelligente intégrée dans l'app</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i data-lucide="library" style="width: 48px; height: 48px;"></i></div>
+                    <h3>Bibliothèque</h3>
+                    <p>Accédez à des milliers de ressources éducatives</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i data-lucide="briefcase" style="width: 48px; height: 48px;"></i></div>
+                    <h3>Offres d'Emploi & Stages</h3>
+                    <p>Trouvez des opportunités professionnelles en RDC</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i data-lucide="compass" style="width: 48px; height: 48px;"></i></div>
+                    <h3>Orientation Finalistes</h3>
+                    <p>Guide complet pour choisir sa filière universitaire</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon"><i data-lucide="star" style="width: 48px; height: 48px;"></i></div>
-                    <h3>Nouveaux Badges</h3>
-                    <p>Système d'étoiles et interactions</p>
+                    <h3>Système d'Étoiles</h3>
+                    <p>Valorisez les meilleurs contenus et créateurs</p>
                 </div>
                 <div class="feature-card">
                     <div class="icon"><i data-lucide="users" style="width: 48px; height: 48px;"></i></div>
                     <h3>Groupes d'Étude</h3>
-                    <p>Collaborez avec vos camarades</p>
+                    <p>Collaborez avec vos camarades de promo</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i data-lucide="trending-up" style="width: 48px; height: 48px;"></i></div>
+                    <h3>Programme Ambassadeur</h3>
+                    <p>Gagnez des commissions en recrutant des abonnés</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i data-lucide="flag" style="width: 48px; height: 48px;"></i></div>
+                    <h3>Signalement de Contenu</h3>
+                    <p>Plateforme sécurisée avec modération active</p>
                 </div>
             </div>
         </div>
@@ -150,27 +257,35 @@
             <div class="faq-grid">
                 <div class="faq-item">
                     <h3><i data-lucide="help-circle" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Comment créer un compte ?</h3>
-                    <p>Deux options : téléchargez l'app Android ou utilisez <a href="https://ios.campusguide.space" target="_blank" style="color: #667eea;">ios.campusguide.space</a> sur iPhone/iPad. Inscrivez-vous avec votre email en quelques secondes !</p>
+                    <p>Téléchargez l'app sur <a href="https://play.google.com/store/apps/details?id=com.campusguide.app" target="_blank" style="color: #667eea; font-weight: 600;">Google Play</a>, l'APK Android ou sur <a href="https://ios.campusguide.space" target="_blank" style="color: #667eea;">ios.campusguide.space</a>. Choisissez votre type de compte : étudiant, finaliste, école, université ou centre de formation.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i data-lucide="graduation-cap" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Je suis finaliste — CampusGuide est pour moi ?</h3>
+                    <p>Absolument ! Créez un compte Finaliste pour accéder à l'orientation universitaire, préparez l'examen d'État, découvrez les filières et universités disponibles en RDC, et connectez-vous avec des étudiants qui vous guideront.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i data-lucide="building-2" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Mon école/université peut-elle avoir un profil ?</h3>
+                    <p>Oui ! Les écoles, lycées, universités, instituts et centres de formation peuvent créer un profil institutionnel officiel sur CampusGuide. Contactez-nous à <a href="mailto:support@campusguide.space" style="color: #667eea;">support@campusguide.space</a> pour commencer.</p>
                 </div>
                 <div class="faq-item">
                     <h3><i data-lucide="award" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Comment recevoir le badge Campus Verified ?</h3>
-                    <p>Pour obtenir le badge Campus Verified, utilisez votre email universitaire lors de l'inscription. Exemples : @unikin.ac.cd, @unilu.ac.cd, @unikin.cd, @unigoma.ac.cd, etc. Si votre université n'est pas reconnue automatiquement, contactez-nous !</p>
-                </div>
-                <div class="faq-item">
-                    <h3><i data-lucide="download-cloud" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Que faire si le téléchargement échoue ?</h3>
-                    <p>Vérifiez votre connexion internet, autorisez les sources inconnues dans les paramètres Android.</p>
-                </div>
-                <div class="faq-item">
-                    <h3><i data-lucide="lock" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Problèmes de connexion ?</h3>
-                    <p>Vérifiez votre email/mot de passe, contactez support@campusguide.space si le problème persiste.</p>
+                    <p>Utilisez votre email universitaire lors de l'inscription (@unikin.ac.cd, @unilu.ac.cd, @unigoma.ac.cd, etc.) ou passez par le processus de vérification manuelle dans l'app.</p>
                 </div>
                 <div class="faq-item">
                     <h3><i data-lucide="smartphone" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Puis-je utiliser CampusGuide sur iPhone ?</h3>
-                    <p>Oui ! Visitez <a href="https://ios.campusguide.space" target="_blank" style="color: #667eea; font-weight: 600;">ios.campusguide.space</a> sur Safari. Vous pouvez l'ajouter à votre écran d'accueil pour une expérience app native. Compatible iPhone, iPad et Mac !</p>
+                    <p>Oui ! Visitez <a href="https://ios.campusguide.space" target="_blank" style="color: #667eea; font-weight: 600;">ios.campusguide.space</a> sur Safari et ajoutez-le à votre écran d'accueil. Compatible iPhone, iPad et Mac.</p>
                 </div>
                 <div class="faq-item">
-                    <h3><i data-lucide="message-circle" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Comment rejoindre des groupes ?</h3>
-                    <p>Sélectionnez votre université lors de l'inscription, puis explorez les groupes de votre faculté.</p>
+                    <h3><i data-lucide="trending-up" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Comment devenir Ambassadeur ?</h3>
+                    <p>Créez un compte Ambassadeur dans l'app. Recrutez des abonnés, suivez vos gains et recevez vos commissions chaque semaine directement sur votre mobile money.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i data-lucide="flag" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Comment signaler un contenu inapproprié ?</h3>
+                    <p>Utilisez le bouton de signalement intégré dans l'app (menu d'une publication) ou envoyez un email à <a href="mailto:support@campusguide.space" style="color: #667eea;">support@campusguide.space</a>. Les signalements liés à la sécurité des enfants sont traités en priorité absolue.</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i data-lucide="lock" style="width: 22px; height: 22px; display: inline-block; vertical-align: middle; margin-right: 8px; color: #667eea;"></i>Problèmes de connexion ?</h3>
+                    <p>Vérifiez votre email/mot de passe. Contactez <a href="mailto:support@campusguide.space" style="color: #667eea;">support@campusguide.space</a> si le problème persiste.</p>
                 </div>
             </div>
         </div>
@@ -214,19 +329,37 @@
     <section class="download" id="telecharger">
         <div class="container">
             <h2>Téléchargez CampusGuide</h2>
-            
-            <div style="margin-bottom: 40px;">
-                <h3 style="color: #667eea; margin-bottom: 10px;"><i data-lucide="smartphone" style="width: 24px; height: 24px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i>Android</h3>
-                <p>Version 2.3.4 • Runtime 1.1.0 • ~50 MB</p>
-                <button id="downloadBtn" class="btn-primary btn-large"><i data-lucide="download" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Télécharger APK Android</button>
-                <p style="margin-top: 15px; color: #667eea; font-size: 14px; font-weight: 600;"><i data-lucide="sparkles" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Alimenté par Lucie IA - Assistante Intelligente de CampusGuide</p>
+
+            <!-- Google Play -->
+            <div style="background:linear-gradient(135deg,#1a1a2e,#16213e);padding:30px;border-radius:20px;color:white;text-align:center;margin-bottom:24px;">
+                <p style="font-size:13px;opacity:.7;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px;">Recommandé — Mises à jour automatiques</p>
+                <h3 style="margin-bottom:16px;font-size:22px;">🎉 Disponible sur Google Play</h3>
+                <a href="https://play.google.com/store/apps/details?id=com.campusguide.app" target="_blank" class="btn-play" style="display:inline-flex;margin:0 auto;">
+                    <svg style="width:28px;height:28px;" viewBox="0 0 24 24" fill="white"><path d="M3 20.5v-17c0-.83 1.01-1.3 1.62-.78l14 8.5c.52.32.52 1.04 0 1.36l-14 8.5C3.93 21.8 3 21.33 3 20.5z"/></svg>
+                    Télécharger sur Google Play
+                </a>
+                <p style="margin-top:14px;font-size:13px;opacity:.7;">Package : com.campusguide.app</p>
             </div>
 
-            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 20px; color: white; text-align: center;">
-                <h3 style="margin-bottom: 15px; font-size: 24px;"><i data-lucide="apple" style="width: 28px; height: 28px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i>Version iOS & Web App</h3>
-                <p style="margin-bottom: 20px; opacity: 0.95;">Utilisez CampusGuide directement dans votre navigateur Safari. Compatible iPhone, iPad et ordinateur !</p>
-                <a href="https://ios.campusguide.space" target="_blank" class="btn-primary btn-large" style="background: white; color: #667eea; display: inline-block; text-decoration: none;"><i data-lucide="globe" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 6px;"></i>Ouvrir ios.campusguide.space</a>
-                <p style="margin-top: 15px; font-size: 14px; opacity: 0.85;"><i data-lucide="lightbulb" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i>Ajoutez à votre écran d'accueil pour une expérience app native</p>
+            <!-- APK Direct -->
+            <div style="background:white;border:2px solid #ecf0f1;padding:24px;border-radius:20px;text-align:center;margin-bottom:24px;">
+                <h3 style="color:#2d3436;margin-bottom:8px;"><i data-lucide="smartphone" style="width:22px;height:22px;display:inline-block;vertical-align:middle;margin-right:6px;"></i>APK Android Direct</h3>
+                <p style="color:#636e72;margin-bottom:16px;font-size:14px;">Pour les appareils sans Google Play</p>
+                <button id="downloadBtn" class="btn-primary btn-large">
+                    <i data-lucide="download" style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:6px;"></i>Télécharger APK Android
+                </button>
+                <p style="margin-top:12px;color:#667eea;font-size:13px;font-weight:600;">
+                    <i data-lucide="sparkles" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:4px;"></i>Inclut Lucie IA — Assistante Intelligente
+                </p>
+            </div>
+
+            <!-- iOS / Web -->
+            <div style="background:linear-gradient(135deg,#667eea,#764ba2);padding:30px;border-radius:20px;color:white;text-align:center;">
+                <h3 style="margin-bottom:12px;font-size:22px;"><i data-lucide="apple" style="width:26px;height:26px;display:inline-block;vertical-align:middle;margin-right:8px;"></i>Version iOS &amp; Web App</h3>
+                <p style="margin-bottom:18px;opacity:.95;">Utilisez CampusGuide sur Safari — iPhone, iPad et Mac. Ajoutez-le à votre écran d'accueil !</p>
+                <a href="https://ios.campusguide.space" target="_blank" class="btn-primary btn-large" style="background:white;color:#667eea;display:inline-block;text-decoration:none;">
+                    <i data-lucide="globe" style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:6px;"></i>Ouvrir ios.campusguide.space
+                </a>
             </div>
         </div>
     </section>
@@ -276,7 +409,15 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 CampusGuide. Tous droits réservés.</p>
+            <p>&copy; 2026 <strong>CampusGuide RDC</strong> &mdash; Galillée. Tous droits réservés.</p>
+            <p style="font-size:13px;opacity:.7;margin-top:6px;">Fondé, conçu et développé par Joel Eyoku Befulu (Le Precepteur) &mdash; Kinshasa, RDC</p>
+            <div class="footer-legal">
+                <a href="securite-enfants.html">🛡️ Sécurité des enfants (CSAE)</a>
+                <a href="mailto:support@campusguide.space?subject=CGU - CampusGuide">Conditions d'utilisation</a>
+                <a href="mailto:support@campusguide.space?subject=Confidentialité - CampusGuide">Politique de confidentialité</a>
+                <a href="mailto:support@campusguide.space?subject=Signalement - CampusGuide">Signaler un problème</a>
+                <a href="https://play.google.com/store/apps/details?id=com.campusguide.app" target="_blank">Google Play</a>
+            </div>
         </div>
     </footer>
 
